@@ -13,7 +13,7 @@ const Navbar = () => {
         Construction
     </Link>
       </div>
-      <div>
+      <div className='flex justify-center items-center'> 
         <ul className="flex gap-8">
           <li>
             <Link href="/homePage/granth">

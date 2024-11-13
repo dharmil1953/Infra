@@ -2,72 +2,79 @@ import Image from "next/image";
 import React from "react";
 import Hero from "./assets/heroImg.png";
 import About from "./assets/AboutImg.png";
+import Bathroom from "./assets/Bathroom.jpg";
+import CustomBuilds from "./assets/CustomBuilds.jpeg";
+import Exterior from "./assets/Exterior.jpg";
+import Kitchen from "./assets/Kitchen.jpg";
+import NewAddition from "./assets/NewAddition.jpg";
+import NewConstruction from "./assets/NewConstruction.jpg";
 
 export default function HomePage() {
   const ServiceCard = ({ title, description, image, linkText }) => {
     return (
-      <div className="bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden">
-        <div className="h-64 md:h-80 relative">
-          <img src={image} alt={title} className="w-full h-full object-cover" />
+      <div className="bg-white rounded-3xl shadow-xl border border-gray-200 overflow-hidden flex flex-col justify-between h-full">
+        <div className="relative h-56">
+          <Image src={image} alt={title} className="w-full h-full object-cover" style={{ borderTopLeftRadius: '1.5rem', borderTopRightRadius: '1.5rem' }} layout="fill" />
         </div>
-        <div className="p-6 md:p-8 space-y-4 rounded-t-3xl text-center ">
-          <h3 className="text-2xl md:text-3xl font-bold">{title}</h3>
-          <p className="text-gray-600">{description}</p>
-
-          <div className="p-6 md:p-8 mt-auto">
+        <div className="p-6 text-center flex-1 flex flex-col justify-between">
+          <div>
+            <h3 className="text-2xl font-bold mb-4">{title}</h3>
+            <p className="text-gray-600 mb-6">{description}</p>
+          </div>
+          <div className="mt-auto">
             <a
               href="#"
-              className="inline-block bg-yellow-500 text-white font-semibold py-3 px-3 text-start rounded-xl w-full"
+              className="inline-block text-start bg-yellow-500 text-green-950 font-semibold py-3 px-6 rounded-full shadow-md transition transform hover:scale-105 w-full"
             >
               {linkText}
             </a>
           </div>
         </div>
       </div>
-    );
-  };
+    )
+  }
 
   const services = [
     {
       title: "Kitchen Remodeling",
       description:
         "Transform your kitchen into the heart of your home with our professional kitchen remodeling service. Enhance functionality, aesthetics, and value with our expert craftsmanship and luxurious gourmet kitchens.",
-      image: "kitchen-remodeling.jpg",
+      image: Kitchen,
       linkText: "More details",
     },
     {
       title: "Bathroom Remodeling",
       description:
         "Revitalize your bathroom with our high quality bathroom remodeling service. From luxurious upgrades to efficient layouts, we`ll transform your space into a relaxing oasis you`ll love we bracing expertise in design.",
-      image: "bathroom-remodeling.jpg",
+      image: Bathroom,
       linkText: "More details",
     },
     {
       title: "New Construction",
       description:
         "With our expertise as Seattle general contractor, we specialize in residential and commercial new construction projects. Construction Professionals for custom Homes and Commercial Buildings.",
-      image: "new-construction.jpg",
+      image: NewConstruction,
       linkText: "More details",
     },
     {
       title: "House Additions",
       description:
         "Transform your home with our professional home addition service. Personalized crafted attached or detached ADU Units. We'll help you expand your living space and create a functional area.",
-      image: "house-additions.jpg",
+      image: NewAddition,
       linkText: "More details",
     },
     {
       title: "Custom Builds",
       description:
         "We specialize in custom builds, crafting unique and personalized construction and remodeling projects tailored to your needs. Our experienced builder team works closely with you, along with architects and designers to bring your ideas to life.",
-      image: "custom-builds.jpg",
+      image: CustomBuilds,
       linkText: "More details",
     },
     {
       title: "Exterior Remodeling",
       description:
         "Revitalize the exterior of your property with our exterior remodeling services. From expert exterior remodeling and durable siding installation to reliable roofing solutions, we cover all your property's exterior remodeling needs.",
-      image: "exterior-remodeling.jpg",
+      image: Exterior,
       linkText: "More details",
     },
   ];
@@ -335,72 +342,29 @@ export default function HomePage() {
       </div>
 
       <div className="my-8 flex-1 mx-12 md:px-14">
-        <div className="flex justify-between p-12 shadow-2xl rounded-2xl">
-          <div>
-            <span className="text-yellow-500 text-4xl font-bold text-center items-center">
-              206-372-6143
-            </span>
-          </div>
-          <div>
-            <span className="text-3xl justify-center">
-              Let's Talk About Your <br />
-              Project Details
-            </span>
-          </div>
-          <div>
-            <button className="bg-yellow-500 p-4 rounded-xl font-semibold text-lg">
-              Contact Us
-            </button>
-          </div>
-        </div>
-      </div>
+  <div className="flex items-center justify-between p-16 shadow-lg rounded-3xl">
+    <div className="flex items-center space-x-2">
+      <span className="text-yellow-500 text-4xl font-bold">
+        <i className="fas fa-phone"></i>
+      </span>
+      <span className="text-yellow-500 text-4xl font-bold">206-372-6143</span>
+    </div>
+    <div>
+      <span className="text-xl text-center justify-center items-center text-gray-700">
+        Let's Talk About Your <br />
+        Project details!
+      </span>
+    </div>
+    <div>
+      <button className="bg-yellow-500 text-white px-6 py-3 rounded-full font-semibold text-lg hover:bg-green-600 transition duration-200">
+        Contact Us
+      </button>
+    </div>
+  </div>
+</div>
 
-      <div className="bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden grid grid-cols-1 md:grid-cols-2">
-        <div className="h-64 md:h-auto relative">
-          <img
-            src="image.png"
-            alt="Kitchen"
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <div className="p-8 md:p-12 space-y-6 flex flex-col justify-center">
-          <h2 className="text-2xl md:text-3xl font-bold">
-            Do you have a question?
-          </h2>
-          <p className="text-gray-700">
-            Serving the greater Seattle area and beyond. For more information on
-            our services, or to inquire about a future project, give us a call!
-          </p>
-          <div className="space-y-4 text-gray-700 ">
-            <div className="flex">
-              <div className="flex-col">
-              <div className="flex items-center space-x-2">
-                <span className="text-green-500">📍</span>
-                <div>
-                  <h3 className="font-semibold">Our address</h3>
-                  <p>12819 SE 38th St, Bellevue, WA 98006</p>
-                </div>
-              </div>
-              <div className="flex items-center space-x-2">
-                <span className="text-green-500">📧</span>
-                <div>
-                  <h3 className="font-semibold">E-mail</h3>
-                  <p>info@blcremodeling.com</p>
-                </div>
-              </div>
-              <div className="flex items-center space-x-2">
-                <span className="text-green-500">📞</span>
-                <div>
-                  <h3 className="font-semibold">Phone</h3>
-                  <p>(206)-479-9242</p>
-                </div>
-              </div>
-              </div>
 
-            </div>
-          </div>
-        </div>
-      </div>
+    
     </>
   );
 }
