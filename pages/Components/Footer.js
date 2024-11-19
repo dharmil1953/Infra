@@ -1,89 +1,63 @@
-import Image from 'next/image'
-import FooterImg from "../assets/Footer.jpg"
+import React from 'react';
+import Image from 'next/image';
+import heroImg from '../assets/heroImg.png';
 
 const Footer = () => {
   return (
-    <div className="flex justify-between px-12 md:px-14 mt-20">
+    <footer className="bg-[#eaf8d9] py-10">
+      <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8 items-start">
+        {/* Left Section */}
+        <div className="space-y-4">
+          <h2 className="font-bold text-lg"><span className="text-green-600">BLC</span> Remodeling</h2>
+          <p>Remodeling Contractor</p>
+          <p>Contact with us:</p>
+          <p className="flex items-center space-x-2"><span>📞</span><span>(206)-479-9242</span></p>
+          <p>info@blcremodeling.com</p>
+          <p className="font-bold">Our Blog - Useful<br />Tips & Inspirations</p>
+        </div>
+        {/* Middle Left */}
         <div>
-            <Image src={FooterImg} alt="Footer Image" className="h-full rounded-xl mx-8" />
+          <h2 className="font-semibold mb-4">Our Service</h2>
+          <ul className="space-y-2">
+            <li>Exterior Remodeling</li>
+            <li>Bathroom Remodeling</li>
+            <li>Interior Remodeling</li>
+            <li>Kitchen Remodeling</li>
+            <li>Custom Builds</li>
+            <li>Additions - ADU Units Construction</li>
+            <li>New Construction</li>
+            <li>Opt-out Preferences</li>
+          </ul>
         </div>
-        <div className='items-start space-y-8'>
-            <h2 className="bold text-5xl justify-center">Do You Have a Question?</h2>
-            <p className="max-w-lg text-xl">serving the greater seattle area beyond. For more information on our services, or to inquire about a future project, give us a call</p>
-            <div className="flex">
-                <div className="space-y-6 font-bold text-xl">
-                    <div className="space-y-5">
-                        <span className='block mb-3'> 📍 Our address</span>
-                        <span>12819 SE 38th st,<br /> Bellevue, WA 98006</span>
-                    </div>
-                    <div className="space-y-5">
-                        <span className='block mb-3'> 📧 E-Mail</span>
-                        <span>info@blcremodeling.com</span>
-                    </div>
-                    <div className="space-y-5">
-                        <span className='block mb-3'>📞 Phone</span>
-                        <span>(206)-479-9242</span>
-                    </div>
-                </div>
-                <div>
-                    <form className="flex-col bg-white p-4 rounded-md shadow-xl mx-6">
-                        <input type="text" placeholder='Enter Your Name' className='block bg-gray-100 p-2 my-6 rounded-xl' />
-                        <input type="text" placeholder='Enter Your Email' className='block bg-gray-100 p-2 my-6 rounded-xl' />
-                        <input type="text" placeholder='Phone Number' className='block bg-gray-100 p-2 my-6 rounded-xl' />
-                        <input type="textarea" placeholder='Details' className='block bg-gray-100 p-2 my-6 rounded-xl' />
-                        <button className='bg-yellow-500 p-4 rounded-lg w-full'>Send</button>
-                    </form>
-                </div>
-            </div>
+        {/* Middle Right */}
+        <div>
+          <h2 className="font-semibold mb-4">Construction & Remodeling Contractor</h2>
+          <ul className="space-y-2">
+            <li>Medina</li>
+            <li>Mercer Island</li>
+            <li>Bellevue</li>
+            <li>Kirkland Newcastle</li>
+            <li>Redmond</li>
+            <li>Issaquah</li>
+            <li>Sammamish</li>
+          </ul>
         </div>
-    </div>
-    //   <div className="bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden grid grid-cols-1 md:grid-cols-2">
-    //     <div className="h-64 md:h-auto relative">
-    //       <img
-    //         src="image.png"
-    //         alt="Kitchen"
-    //         className="w-full h-full object-cover"
-    //       />
-    //     </div>
-    //     <div className="p-8 md:p-12 space-y-6 flex flex-col justify-center">
-    //       <h2 className="text-2xl md:text-3xl font-bold">
-    //         Do you have a question?
-    //       </h2>
-    //       <p className="text-gray-700">
-    //         Serving the greater Seattle area and beyond. For more information on
-    //         our services, or to inquire about a future project, give us a call!
-    //       </p>
-    //       <div className="space-y-4 text-gray-700 ">
-    //         <div className="flex">
-    //           <div className="flex-col">
-    //           <div className="flex items-center space-x-2">
-    //             <span className="text-green-500">📍</span>
-    //             <div>
-    //               <h3 className="font-semibold">Our address</h3>
-    //               <p>12819 SE 38th St, Bellevue, WA 98006</p>
-    //             </div>
-    //           </div>
-    //           <div className="flex items-center space-x-2">
-    //             <span className="text-green-500">📧</span>
-    //             <div>
-    //               <h3 className="font-semibold">E-mail</h3>
-    //               <p>info@blcremodeling.com</p>
-    //             </div>
-    //           </div>
-    //           <div className="flex items-center space-x-2">
-    //             <span className="text-green-500">📞</span>
-    //             <div>
-    //               <h3 className="font-semibold">Phone</h3>
-    //               <p>(206)-479-9242</p>
-    //             </div>
-    //           </div>
-    //           </div>
+        {/* Right Section with Image */}
+        <div className="relative">
+          <Image src={heroImg} alt="Remodeling Services" className="w-full h-auto rounded-lg" />
+        </div>
+      </div>
+      {/* Footer Bottom */}
+      <div className="mt-10 text-center border-t border-gray-300 pt-6 text-sm">
+        <p>@ 2018 - 2024 BLC Remodeling. All Rights Reserved</p>
+        <div className="flex justify-center space-x-4 mt-2">
+          <span>📘</span>
+          <span>📸</span>
+          <span>📍</span>
+        </div>
+      </div>
+    </footer>
+  );
+};
 
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </div>
-  )
-}
-
-export default Footer
+export default Footer;
