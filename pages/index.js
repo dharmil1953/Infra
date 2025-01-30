@@ -88,7 +88,7 @@ export default function HomePage() {
 
   return (
     <>
-      <div className="flex flex-col md:flex-row items-center justify-between px-4 md:px-12 py-12 md:py-16">
+      <div className="flex flex-col md:flex-row items-center justify-between px-4 md:px-12 py-12 md:py-16" data-cloudcannon="editable">
         <div className="md:flex-1 mb-8 md:mb-0">
           <h1 className="text-4xl md:text-7xl font-bold leading-12 mb-6 text-green-950">
             BLC remodeler <br /> trusted greater <br /> seattle home
