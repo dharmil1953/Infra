@@ -13,7 +13,7 @@ commit_templates:
     _inputs:
     extra_data:
 editor:
-  default_path:
+  default_path: "/pages/index.js"
 source_editor:
   tab_size: 2
   theme: monokai
