@@ -6,6 +6,18 @@ paths:
 _enabled_editors:
   - visual
   - content
+commit_templates:
+  - label:
+    template_string:
+    template_path:
+    _inputs:
+    extra_data:
+editor:
+  default_path:
+source_editor:
+  tab_size: 2
+  theme: monokai
+  show_gutter: true
 timezone: Asia/Calcutta
 markdown:
   engine: commonmark
