@@ -3,6 +3,9 @@ source: /
 paths:
   uploads: uploads
   static: ''
+_enabled_editors:
+  - visual
+  - content
 timezone: Asia/Calcutta
 markdown:
   engine: commonmark
